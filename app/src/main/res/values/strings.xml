@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Hello ChatGPT</string>
+    <string name="text_input_hint">Enter your query</string>
+    <string name="title">Let\'s have a conversation with ChatGPT!</string>
+
+    <string name="please_wait">Please wait..</string>
+    <string name="please_enter_query">Please enter your query..</string>
+    <string name="please_retry">Please Retry...</string>
+</resources>
