@@ -1,8 +1,8 @@
 package dev.seabat.android.hellochatgpt.domain.contract
 
-import dev.seabat.android.hellochatgpt.data.OpenAiResponse
+import dev.seabat.android.hellochatgpt.domain.entities.ChatGptData
 import okhttp3.RequestBody
 
 interface OpenAiRepositoryContract {
-    suspend fun getPrompt(message: RequestBody): OpenAiResponse
+    suspend fun getPrompt(query: String): ChatGptData
 }

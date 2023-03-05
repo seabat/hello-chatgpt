@@ -6,6 +6,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dev.seabat.android.hellochatgpt.domain.entities.ChatGptData
 import dev.seabat.android.hellochatgpt.domain.usecase.ChatGptUseCase
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -16,13 +17,13 @@ class MainViewModel @Inject constructor(
     private val chatGpt: ChatGptUseCase
 ) : ViewModel() {
 
-    private val _response = MutableLiveData<String>()
-    val response: LiveData<String>
-        get() = _response
+    private val _chatGptData = MutableLiveData<ChatGptData>()
+    val chatGptData: LiveData<ChatGptData>
+        get() = _chatGptData
 
     fun sendMessage(query: String) {
         viewModelScope.launch {
-            _response.value = chatGpt.sendMessage(query)
+            _chatGptData.value = chatGpt.sendMessage(query)
         }
     }
 

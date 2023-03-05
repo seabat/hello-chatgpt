@@ -40,9 +40,9 @@ class MainActivity : AppCompatActivity() {
             false
         })
 
-        viewModel.response.observe(this, Observer {
+        viewModel.chatGptData.observe(this, Observer {
             if (it !== null) {
-                binding.textResponse.text = binding.textInputEditQuery.text.toString() + it
+                binding.textResponse.text = it.question + it.answer
             } else {
                 Toast.makeText(this, getString(R.string.please_retry), Toast.LENGTH_SHORT).show()
             }
