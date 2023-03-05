@@ -35,5 +35,5 @@ see. https://platform.openai.com/docs/api-reference/making-requests
  */
 interface OpenAiService {
     @POST("completions")
-    suspend fun getPrompt(@Body body: RequestBody) : OpenAiResponse
+    suspend fun getPrompt(@Body body: RequestBody): OpenAiResponse
 }

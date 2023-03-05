@@ -29,9 +29,9 @@ object OpenAiServiceModule {
     @Provides
     @Singleton
     fun provideOpenAiService(): OpenAiService = Retrofit.Builder()
-            .client(client)
-            .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(OpenAiService::class.java)
+        .client(client)
+        .baseUrl(BASE_URL)
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+        .create(OpenAiService::class.java)
 }
