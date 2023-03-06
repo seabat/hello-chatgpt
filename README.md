@@ -6,8 +6,14 @@
 
 ## 構成
 
-MVVM アーキテクチャパターンを採用。  
+* MVVM アーキテクチャパターンを採用  
   ViewModel + LiveData + ビューバインディング
+
+* [Android 推奨のアーキテクチャ](https://developer.android.com/jetpack/guide?hl=ja) に準拠  
+  UI Layer -> Domain Layer -> Data Layer
+
+* [クリーンアーキテクチャ](https://www.amazon.co.jp/exec/obidos/ASIN/4048930656/maple036-22/) に準拠  
+  Use Case / Controllers & Gateways & Presenters / External Interface .etc
 
 ## Dependencies
 
